@@ -99,6 +99,16 @@ namespace G_ASP_NET_101_C_Basics_05
             Console.WriteLine(genreFromNumber);
 
             #endregion
+
+            #region Question 7
+
+            // Enum.Parse converts text to enum.
+            // Expected result: Science.
+            string genreText = "Science";
+            Genre genreFromText = (Genre)Enum.Parse(typeof(Genre), genreText);
+            Console.WriteLine(genreFromText);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
