@@ -79,6 +79,16 @@ namespace G_ASP_NET_101_C_Basics_05
             Console.WriteLine(book.BookGenre);
 
             #endregion
+
+            #region Question 5
+
+            // Casting enum to int prints the number value.
+            // Expected result: Fiction = 0, NonFiction = 1, Science = 2.
+            Console.WriteLine((int)Genre.Fiction);
+            Console.WriteLine((int)Genre.NonFiction);
+            Console.WriteLine((int)Genre.Science);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
