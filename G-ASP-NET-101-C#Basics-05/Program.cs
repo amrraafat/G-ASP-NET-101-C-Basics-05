@@ -35,6 +35,14 @@ namespace G_ASP_NET_101_C_Basics_05
             PrintBookInfo(pages: 450, title: "Named Parameters Book");
 
             #endregion
+
+            #region Question 4
+
+            // This method prints all titles.
+            // Expected result: each title prints in a new line.
+            PrintAllTitles("Clean Code", "C# Basics", "ASP.NET Core");
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -54,6 +62,15 @@ namespace G_ASP_NET_101_C_Basics_05
         {
             // This prints book info.
             Console.WriteLine($"Title: {title}, Pages: {pages}");
+        }
+
+        static void PrintAllTitles(params string[] titles)
+        {
+            // This loop prints every title.
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
         }
     }
 }
