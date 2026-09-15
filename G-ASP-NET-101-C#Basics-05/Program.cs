@@ -43,6 +43,16 @@ namespace G_ASP_NET_101_C_Basics_05
             PrintAllTitles("Clean Code", "C# Basics", "ASP.NET Core");
 
             #endregion
+
+            #region Question 1
+
+            Book book = new Book();
+
+            // password is private, so we cannot print it here.
+            // Expected result if we try: compile error because Main is outside Book class.
+            // Console.WriteLine(book.password);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -71,6 +81,17 @@ namespace G_ASP_NET_101_C_Basics_05
             {
                 Console.WriteLine(title);
             }
+        }
+    }
+
+    class Book
+    {
+        private string password = "secret";
+
+        private void PrintPasswordInsideClass()
+        {
+            // Private can be used inside the same class only.
+            Console.WriteLine(password);
         }
     }
 }
