@@ -61,6 +61,15 @@ namespace G_ASP_NET_101_C_Basics_05
             Console.WriteLine(book.copiesInStock);
 
             #endregion
+
+            #region Question 3
+
+            // Title is public, so we can set and print it from Main.
+            // Expected result: prints the book title.
+            book.Title = "Science Book";
+            Console.WriteLine(book.Title);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -96,6 +105,7 @@ namespace G_ASP_NET_101_C_Basics_05
     {
         private string password = "secret";
         internal int copiesInStock = 5;
+        public string Title = "";
 
         private void PrintPasswordInsideClass()
         {
