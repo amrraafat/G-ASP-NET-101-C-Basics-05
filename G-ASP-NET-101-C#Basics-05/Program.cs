@@ -27,6 +27,14 @@ namespace G_ASP_NET_101_C_Basics_05
             PrintBookInfo("ASP.NET Basics", 500);
 
             #endregion
+
+            #region Question 3
+
+            // This call uses named parameters.
+            // Expected result: pages is sent before title.
+            PrintBookInfo(pages: 450, title: "Named Parameters Book");
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
