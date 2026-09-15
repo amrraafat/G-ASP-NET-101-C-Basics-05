@@ -53,6 +53,14 @@ namespace G_ASP_NET_101_C_Basics_05
             // Console.WriteLine(book.password);
 
             #endregion
+
+            #region Question 2
+
+            // copiesInStock is internal, so it can be used in the same project.
+            // Expected result: it compiles and prints 5.
+            Console.WriteLine(book.copiesInStock);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -87,6 +95,7 @@ namespace G_ASP_NET_101_C_Basics_05
     class Book
     {
         private string password = "secret";
+        internal int copiesInStock = 5;
 
         private void PrintPasswordInsideClass()
         {
