@@ -89,6 +89,16 @@ namespace G_ASP_NET_101_C_Basics_05
             Console.WriteLine((int)Genre.Science);
 
             #endregion
+
+            #region Question 6
+
+            // Casting int to Genre converts the number to enum value.
+            // Expected result: 1 becomes NonFiction.
+            int genreNumber = 1;
+            Genre genreFromNumber = (Genre)genreNumber;
+            Console.WriteLine(genreFromNumber);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
