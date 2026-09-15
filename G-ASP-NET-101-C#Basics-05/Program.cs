@@ -16,6 +16,17 @@ namespace G_ASP_NET_101_C_Basics_05
             }
 
             #endregion
+
+            #region Question 2
+
+            // This method prints book title and pages.
+            // Expected result: first call uses default pages 300.
+            PrintBookInfo("C# Basics");
+
+            // Expected result: second call uses pages 500.
+            PrintBookInfo("ASP.NET Basics", 500);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -29,6 +40,12 @@ namespace G_ASP_NET_101_C_Basics_05
 
             price = 0;
             return false;
+        }
+
+        static void PrintBookInfo(string title, int pages = 300)
+        {
+            // This prints book info.
+            Console.WriteLine($"Title: {title}, Pages: {pages}");
         }
     }
 }
