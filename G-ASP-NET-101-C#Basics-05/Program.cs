@@ -70,6 +70,15 @@ namespace G_ASP_NET_101_C_Basics_05
             Console.WriteLine(book.Title);
 
             #endregion
+
+            #region Question 4
+
+            // Genre is a property in Book.
+            // Expected result: prints Science.
+            book.BookGenre = Genre.Science;
+            Console.WriteLine(book.BookGenre);
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
@@ -101,11 +110,19 @@ namespace G_ASP_NET_101_C_Basics_05
         }
     }
 
+    enum Genre
+    {
+        Fiction,
+        NonFiction,
+        Science
+    }
+
     class Book
     {
         private string password = "secret";
         internal int copiesInStock = 5;
         public string Title = "";
+        public Genre BookGenre { get; set; }
 
         private void PrintPasswordInsideClass()
         {
