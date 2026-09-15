@@ -109,6 +109,24 @@ namespace G_ASP_NET_101_C_Basics_05
             Console.WriteLine(genreFromText);
 
             #endregion
+
+            #region Question 8
+
+            // Enum.TryParse tries to convert text to enum safely.
+            // Expected result: Mystery is not valid, so it prints Unknown genre.
+            string wrongGenreText = "Mystery";
+            bool isValidGenre = Enum.TryParse(wrongGenreText, out Genre unknownGenre);
+
+            if (isValidGenre)
+            {
+                Console.WriteLine(unknownGenre);
+            }
+            else
+            {
+                Console.WriteLine("Unknown genre");
+            }
+
+            #endregion
         }
 
         static bool TryGetPrice(string title, out double price)
